@@ -1,0 +1,56 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prayer Time Website</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile -->
+</head>
+<body>
+    <header>
+        <h1>Prayer Times</h1>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="toggle-label">Dark Mode</span>
+        </div>
+    </header>
+    <main>
+        <div class="selectors">
+            <div class="selector">
+                <label for="year-select">Select Year:</label>
+                <select id="year-select"></select>
+            </div>
+            <div class="selector">
+                <label for="city-select">Select City:</label>
+                <select id="city-select"></select>
+            </div>
+        </div>
+        <div class="current-date" id="current-date"></div> <!-- Display current date -->
+        <div class="current-time" id="current-time"></div> <!-- Display current time -->
+        <div class="table-container"> <!-- Added container for responsive handling -->
+            <table id="prayer-times">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Imsyak</th>
+                        <th>Shubuh</th>
+                        <th>Terbit</th>
+                        <th>Dhuha</th>
+                        <th>Dzuhur</th>
+                        <th>Ashr</th>
+                        <th>Magrib</th>
+                        <th>Isya</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="error-message"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
